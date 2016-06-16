@@ -1,0 +1,39 @@
+<template name="overview">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <h1>Deine Einreichungen</h1>
+                <h6>Maker Messe f&uuml;r die ganze Familie</h6>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">L&ouml;schen</th>
+                                <th>Projektname</th>
+                                <th>Beschreibung</th>
+                                <th>Eingereicht am</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each submissions }}
+                                {{> submissionItem }}
+                            {{/each }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-footer text-center">
+                {{#if currentUser}}
+                <a href="/" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> &nbsp; Zur&uuml;ck</a>
+                <a href="/form" class="btn btn-success" role="button">Neues Projekt einreichen</a> {{else}}
+                <button class="btn btn-success" type="button" disabled>
+                    Logge Dich ein,
+                    <br> um ein Projekt einzureichen
+                </button>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,9 +1,10 @@
-# Messeanmeldung
-Anmeldeformalitäten für Maker Messe im Herbst
+# Online Anmeldung
+App zur Anmeldung zur Maker Messe
 
-## Content
-* ./Online - Meteor app zur Anmeldung
-* ./Offline - Papier-Formular zur Anmeldung
+## Anwendung
+* run `meteor`
+* open in Browser [http://localhost:3000/](http://localhost:3000/)
+* create a Test User Account
 
 ## Lizenz
 ### Inhalt

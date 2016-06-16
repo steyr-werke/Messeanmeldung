@@ -1,0 +1,15 @@
+/* CSS declarations go here */
+body{
+  background:url(/img/bg_makerspace.jpg) center center fixed;
+  background-size:cover;
+  background-position: 10% 50%;
+}
+
+body {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.panel {
+    border: 0px;
+}

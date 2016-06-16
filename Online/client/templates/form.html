@@ -1,0 +1,167 @@
+<template name="form">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <h1>Formular</h1>
+                <h6>Maker Messe f&uuml;r die ganze Familie</h6>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" id="addProjectForm">
+                    <fieldset>
+                        <legend>Dein Projekt</legend>
+
+                        <!-- Projekt -->
+                        <div class="form-group row">
+                            <!-- Name -->
+                            <label for="inputProjectName" class="col-md-3 control-label">Wie hei&szlig;t das Projekt?</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control required" id="inputProjectName" name="inputProjectName" placeholder="Projektname">
+                            </div>
+                            <!-- Beschreibung -->
+                            <label for="inputProjectDescription" class="col-md-3 control-label">Beschreibe es kurz:</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" rows="3" id="inputProjectDescription" name="inputProjectDescription" placeholder="Beschreibung"></textarea>
+                                <span class="help-block">max. 800 Zeichen</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <!-- Infrastruktur -->
+                    <fieldset>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <h4>Bedarf</h4>
+                            </div>
+
+                            <!-- Platzbedarf -->
+                            <label class="col-md-4 text-right">Wieviel Platz wird ben&ouml;tigt?</label>
+                            <div class="col-md-8">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="inputSpaceBundle" id="inputspaceBundle1" class="required" value="1"> Paket I: #fixme kleiner Platzbedarf
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="inputSpaceBundle" id="inputspaceBundle2" value="2"> Paket II: #fixme grosser Platzbedarf
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="inputSpaceBundle" id="inputspaceBundle3" value="3"> Paket III: #fixme mobiles Projekt
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Strom -->
+                            <label for="inputElectricity" class="col-md-2 control-label">Brauchst Du Strom?</label>
+                            <div class="col-md-2">
+                                <select class="form-control" id="inputElectricity">
+                                    <option value="0">-</option>
+                                    <option value="1">ja</option>
+                                    <option value="2">nein</option>
+                                </select>
+                            </div>
+                            <label for="inputElectricityDemand" class="col-md-2 control-label text-right">Was wird angeschlossen?</label>
+                            <div class="col-md-6">
+                                <textarea class="form-control" rows="3" id="inputElectricityDemand" placeholder="Ger&auml;te bzw. Gesamtleistung (in Watt)"></textarea>
+                                <span class="help-block">max. 500 Zeichen</span>
+                            </div>
+
+                            <!-- Anlieferung Tag -->
+                            <label for="inputLogisticsSlots" class="col-md-3 control-label">Wann m&ouml;chtest Du aufbauen?</label>
+                            <div class="col-md-5">
+                                <select class="form-control" id="inputLogisticsSlots">
+                                    <option value="0">-</option>
+                                    <option value="1">Slot I: FR, 29.9.2016 - 18:00 - 20:00 Uhr</option>
+                                    <option value="2">Slot II: FR, 30.9.2016 - 08:00 - 10:00 Uhr</option>
+                                    <option value="3">Slot III: SA, 30.9.2016 - 10:00 - 12:00 Uhr</option>
+                                </select>
+                            </div>
+                            <!-- Anlieferung Hilfe -->
+                            <label for="inputLogisticsHelp" class="col-md-2 control-label">Hilfe bei Anlieferung?</label>
+                            <div class="col-md-2">
+                                <select class="form-control" id="inputLogisticsHelp">
+                                    <option value="0">-</option>
+                                    <option value="1">ja</option>
+                                    <option value="2">nein</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                    <br>
+                    <!-- Formales -->
+                    <fieldset>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <h4>Formales</h4>
+                            </div>
+                            <!-- Namen -->
+                            <label for="inputFirstName" class="col-md-2 control-label">Vorname</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="inputFirstName" placeholder="Vorname">
+                            </div>
+                            <label for="inputSurName" class="col-md-2 control-label">Nachname</label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="inputSurName" name="inputSurName" placeholder="Nachname">
+                            </div>
+
+                            <!-- Anschrift -->
+                            <label for="inputAddress" class="col-md-2 control-label">Anschrift</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="inputAddress">
+                            </div>
+                            <label for="inputPostalCode" class="col-md-2 control-label">Plz</label>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control" id="inputPostalCode">
+                            </div>
+                            <label for="inputCity" class="col-md-1 col-md-offset-1 control-label">Ort</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+
+                            <!-- Mail -->
+                            <div class="col-md-6 form-group">
+                                <label for="inputEmail" class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10 input-group">
+                                    <span class="input-group-addon" id="iconEmail"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span></span>
+                                    <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="iconEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <!-- Telefon -->
+                            <div class="col-md-6 form-group">
+                                <label for="inputTel" class="col-md-3 control-label">Tel</label>
+                                <div class="col-md-9 input-group">
+                                    <span class="input-group-addon" id="iconTel"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></span>
+                                    <input type="tel" class="form-control" id="inputTel" aria-describedby="iconTel" placeholder="Telefonnummer">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </fieldset>
+                    <!-- Bedingungen -->
+                    <fieldset>
+                        <div class="form-group row">
+                            <div class="col-md-12 checkbox">
+                                <label>
+                                    <input type="checkbox" id="inputParticipationCondition" name="inputParticipationCondition"> Ich akzeptiere die <a href="/participation" target="_blank">Teilnahmenbedingungen</a>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <!-- Controls -->
+                    <fieldset>
+                        <div class="form-group row text-center">
+                            <div class="col-md-6 col-md-offset-3">
+                                <a href="/" type="reset" class="btn btn-primary">Abbrechen</a>
+                                <button type="submit" class="btn btn-success">Einreichen</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>

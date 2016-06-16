@@ -1,0 +1,41 @@
+<template name="description">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <h1>Anmeldung</h1>
+                <h6>Maker Messe f&uuml;r die ganze Familie</h6>
+            </div>
+                    <div class="panel-body">
+                        <h4 class="text-center">Hier kannst Du ein Projekt für die Messe am 30.9. und 1.10.2016 einreichen</h4>
+                        <p class="text-center">Wir suchen Projekte aus den Bereichen:</p>
+                        <ul>
+                            <li>Handwerk/Crafting/Handarbeit</li>
+                            <li>3D-Druck/CNC-Fr&auml;sen</li>
+                            <li>Robotik/Drohnen</li>
+                            <li>Elektronik/HardwareHacking</li>
+                            <li>IoT/Mikrocontroller</li>
+                            <li>Nachhaltigkeit/Umwelt</li>
+                            <li>Recycling/Upcycling</li>
+                            <li>Wissenschaft/Sch&uuml;lerprojekte</li>
+                            <li>Musik/Performance/Kunst</li>
+                            <li>Vintage/Steampunk</li>
+                            <li>Mobilit&auml;t/Fahrrad</li>
+                            <li>uvm.</li>
+                        </ul>
+                        <br>
+                        <p class="text-center">Die Anmeldung ist bis einschlie&szlig;lich #FIXME m&ouml;glich.</p>
+                        <br>
+                        <div class="panel-footer text-center">
+                            {{#if currentUser}}
+                            <a href="/overview" class="btn btn-primary" role="button">Deine Einreichungen</a>
+                            <a href="/form" class="btn btn-success" role="button">Projekt einreichen</a> {{else}}
+                            <button class="btn btn-success" type="button" disabled>
+                                Logge Dich ein,
+                                <br> um ein Projekt einzureichen
+                            </button>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+</template>
